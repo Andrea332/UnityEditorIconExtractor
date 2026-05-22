@@ -34,7 +34,6 @@ public static class IconExtractor
                 var iconPath = Path.Combine(folderPath, icon.name + ".png");
                 File.WriteAllBytes(iconPath, readableTexture.EncodeToPNG());
 
-                // Puliamo la memoria per evitare leak
                 UnityEngine.Object.DestroyImmediate(readableTexture);
 
                 count++;
